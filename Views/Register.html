@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<title>Registration Form</title>
 	<link rel="icon" href="Data/OIG.jpg" />
 	<style>
 		@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Fjalla+One&family=Sedgwick+Ave+Display&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
@@ -60,7 +61,7 @@
 		input[type="email"],
 		input[type="password"],
 		input[type="text"] {
-			width: fit-content;
+			width:fit-content;
 			padding: 12px 20px;
 			margin: 8px 0;
 			display: inline-block;
@@ -73,16 +74,20 @@
 
 <body>
 	<section>
-		<form method="POST" action="../Controllers/Login.php" autocomplete="off">
+		<form method="POST" action="../Controllers/Register.php" autocomplete="off">
 			<div>
-				<h2>Login</h2>
+				<h2>Register</h2>
+				<label for="username"><b>User Name</b></label>
+				<br>
+				<input type="text" placeholder="Enter User name" name="username" required >
+				<br>
 				<label for="email"><b>email</b></label>
 				<br>
 				<input type="email" placeholder="Enter email" name="email" required >
 				<br>
 				<label for="password"><b>Password</b></label>
 				<br>
-				<input type="password" placeholder="Enter Password" name="password" required id="myInput"><br>
+				<input type="password" placeholder="Enter Password" name="password" required id="myInput" ><br>
 				<label for="checkbox"><b>Show Password</b></label>
 				<input type="checkbox" onclick="myFunction()">
 				<script>
@@ -95,10 +100,9 @@
 						}
 					}
 				</script><br>
-				<button type="submit">Login</button>
-				<br>
+				<button type="submit">Register</button>
 				<h4>
-					New Here? <a class="new" href="Register.html">Register Now!</a>
+					already have an accont?<a class="new" href="Login.html">Login Now!</a>
 				</h4>
 			</div>
 		</form>
