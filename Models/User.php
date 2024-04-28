@@ -1,5 +1,5 @@
 <?php 
-
+require 'DBController.php';
 class User {
     private $username;
     private $email;
@@ -21,23 +21,18 @@ class User {
         $this->password = $password;
     }
     public function Register($username,$email,$password){
-        $conn = new mysqli('localhost', 'root', '', 'projectsw');
-        if ($conn->connect_error) {
-            die('Connection error:' . $conn->connect_error);
-        }
+        $newController = new DBController();
+        $newController->openConnection();
         $sql = "INSERT INTO `login` (`username`,`email`, `password`) VALUES ('$username','$email','$password')";
-        mysqli_query($conn, $sql);
+        $newController->insert($sql);
         require('../Views/Home.php');
         exit();
 }
     public function Login($email,$password){
-        $conn = new mysqli('localhost', 'root', '', 'projectsw');
-        if ($conn->connect_error) {
-            die('Connection error: ' . $conn->connect_error);
-        }
+        $newController = new DBController();
+        $newController->openConnection();
         $sql = "SELECT * FROM `login` WHERE email ='$email' AND password='$password'";
-        $result = mysqli_query($conn, $sql);
-        if ($row = mysqli_fetch_assoc($result)) {
+        if ($newController->select($sql)) {
             require('../Views/Home.php');
             exit();
         } else {

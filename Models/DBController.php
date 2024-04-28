@@ -35,12 +35,7 @@ class DBController
             echo "Error : " . mysqli_error($this->connection);
             return false;
         } else {
-            $row = $result->fetch_array();
-            if ($row) {
-                return $row[0];
-            } else {
-                return "No result found";
-            }
+            return $result->fetch_all(MYSQLI_ASSOC);
         }
     }
     public function insert($qry)
