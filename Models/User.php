@@ -27,7 +27,7 @@ class User {
         }
         $sql = "INSERT INTO `login` (`username`,`email`, `password`) VALUES ('$username','$email','$password')";
         mysqli_query($conn, $sql);
-        require('../Views/Home.html');
+        require('../Views/Home.php');
         exit();
 }
     public function Login($email,$password){
@@ -38,7 +38,7 @@ class User {
         $sql = "SELECT * FROM `login` WHERE email ='$email' AND password='$password'";
         $result = mysqli_query($conn, $sql);
         if ($row = mysqli_fetch_assoc($result)) {
-            require('../Views/Home.html');
+            require('../Views/Home.php');
             exit();
         } else {
             require('../Views/Error.html');

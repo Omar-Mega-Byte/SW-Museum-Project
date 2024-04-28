@@ -1,4 +1,6 @@
 <?php
+require 'DBController.php';
+
 class Museum {
     private $name;
     private $location;
@@ -8,24 +10,16 @@ class Museum {
     public function __construct(){
     }
     public function getTime(){
-        $conn = new mysqli('localhost', 'root', '', 'projectsw');
-        if ($conn->connect_error) {
-            die('Connection error: ' . $conn->connect_error);
-        }
+        $newController = new DBController();
+        $newController->openConnection();
         $sql = "SELECT `openTime` FROM `Museum` WHERE name ='Helwan'";
-        $result = mysqli_query($conn, $sql);
-        $row = $result->fetch_assoc();
-        echo $row['openTime'];
+        echo $newController->select($sql);
     }
     public function getStatus(){
-        $conn = new mysqli('localhost', 'root', '', 'projectsw');
-        if ($conn->connect_error) {
-            die('Connection error: ' . $conn->connect_error);
-        }
+        $newController = new DBController();
+        $newController->openConnection();
         $sql = "SELECT `currentStatus` FROM `Museum` WHERE name ='Helwan'";
-        $result = mysqli_query($conn, $sql);
-        $row = $result->fetch_assoc();
-        echo $row['currentStatus'];
+        echo $newController->select($sql);
     }
 }
 ?>
