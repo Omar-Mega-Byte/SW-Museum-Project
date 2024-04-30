@@ -26,6 +26,7 @@ class User {
         $sql = "INSERT INTO `login` (`username`,`email`, `password`) VALUES ('$username','$email','$password')";
         $newController->insert($sql);
         require('../Views/Home.php');
+        $newController->closeConnection();
         exit();
 }
     public function Login($email,$password){
@@ -34,11 +35,28 @@ class User {
         $sql = "SELECT * FROM `login` WHERE email ='$email' AND password='$password'";
         if ($newController->select($sql)) {
             require('../Views/Home.php');
+            $newController->closeConnection();
             exit();
         } else {
             require('../Views/Error.html');
+            $newController->closeConnection();
             exit();
         }
+    }
+    public function ContactMusuem($username,$email,$subject,$message){
+        $newController = new DBController();
+        $newController->openConnection();
+        $sql="INSERT INTO `contactus` (`username`,`email`, `subject` ,`message`) VALUES ('$username','$email','$subject','$message')";
+        if ($newController->insert($sql)) {
+            require('../Views/Success.html');
+            $newController->closeConnection();
+            exit();
+        } else {
+            require('../Views/Error.html');
+            $newController->closeConnection();
+            exit();
+        }
+
     }
 }
 ?>
