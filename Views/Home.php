@@ -72,7 +72,7 @@
                     <div class="card">
                         <img src="../Data/1127958.jpg" class="card-img-top" alt="Exhibition Image">
                         <div class="card-body">
-                            <h5 class="card-title">GREEK civilization</h5>
+                            <h5 class="card-title">Greek civilization</h5>
                             <p class="card-text">Dive into ancient Greece's captivating mythology and history.
                                 Explore heroes and iconic tales like Zeus and Hercules. Immerse yourself in art, artifacts, and the spirit of the Acropolis and Olympic Games. Experience the timeless allure of this legendary civilization.</p>
                             <a href="#" class="btn btn-primary">Learn More</a>
@@ -83,7 +83,7 @@
                     <div class="card">
                         <img src="../Data/625824.jpg" class="card-img-top" alt="Exhibition Image">
                         <div class="card-body">
-                            <h5 class="card-title">ancient Egyptian civilization</h5>
+                            <h5 class="card-title">Ancient Egyptian civilization</h5>
                             <p class="card-text">Journey to ancient Egypt and discover the mystique of the Pharaohs.
                                 Marvel at the grand pyramids, temples, and treasures like those of Tutankhamun.
                                 Delve into mummification rituals, hieroglyphs, and the enduring legacy of a civilization that continues to fascinate.</p>
@@ -110,6 +110,15 @@
             <p>Information about how visitors can get involved with the museum, such as volunteering or membership</p>
             <a href="#" class="btn btn-primary">Learn More</a>
         </div>
+    </section>
+        <section class="py-4">
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="Views/ContactUs.html">Contact us</a></li>
+            <li><a href="#">Provide a feedback</a></li>
+            <li><a href="#">Muesum map</a></li>
+            <li><a href="#">Hire a Guide</a></li>
+        </ul>
     </section>
     <footer class="bg-dark text-white py-4">
         <div class="container">
