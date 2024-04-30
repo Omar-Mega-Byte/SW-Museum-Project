@@ -1,5 +1,5 @@
 <?php
-
+require 'DBController.php';
 class Museum {
     private $name;
     private $location;

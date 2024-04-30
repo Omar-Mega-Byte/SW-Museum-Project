@@ -25,7 +25,7 @@ class User {
         $newController->openConnection();
         $sql = "INSERT INTO `login` (`username`,`email`, `password`) VALUES ('$username','$email','$password')";
         $newController->insert($sql);
-        require('../Views/Home.php');
+        header('Location: ../Views/Home.php');
         $newController->closeConnection();
         exit();
 }
@@ -34,11 +34,11 @@ class User {
         $newController->openConnection();
         $sql = "SELECT * FROM `login` WHERE email ='$email' AND password='$password'";
         if ($newController->select($sql)) {
-            require('../Views/Home.php');
+            header ('Location: ../Views/Home.php');
             $newController->closeConnection();
             exit();
         } else {
-            require('../Views/Error.html');
+            header('Location: ../Views/Error.html');
             $newController->closeConnection();
             exit();
         }
@@ -48,15 +48,14 @@ class User {
         $newController->openConnection();
         $sql="INSERT INTO `contactus` (`username`,`email`, `subject` ,`message`) VALUES ('$username','$email','$subject','$message')";
         if ($newController->insert($sql)) {
-            require('../Views/Success.html');
+            header('Location: ../Views/Success.html');
             $newController->closeConnection();
             exit();
         } else {
-            require('../Views/Error.html');
+            header('Location: ../Views/Error.html');
             $newController->closeConnection();
             exit();
         }
-
     }
 }
 ?>
