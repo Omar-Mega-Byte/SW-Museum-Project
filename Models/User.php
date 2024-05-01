@@ -57,5 +57,18 @@ class User {
             exit();
         }
     }
+    public function getUserInfoByEmail($userEmail){
+        $newController = new DBController();
+        $newController->openConnection();
+        $sql = "SELECT * FROM `login` WHERE email ='$userEmail'";
+        $userInfo = $newController->select($sql);
+        $newController->closeConnection();
+        if ($userInfo !== false) {
+            return $userInfo[0];
+        } else {
+            return false;
+        }
+    }
+    
 }
 ?>

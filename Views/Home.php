@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="icon" href="../Data/Untitled (1).png">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +21,9 @@
                     <li class="list-inline-item"><a href="#" class="text-white">Learn</a></li>
                     <li class="list-inline-item"><a href="#" class="text-white">Membership</a></li>
                     <li class="list-inline-item"><a href="#" class="text-white">Facilities</a></li>
+                    <li class="list-inline-item"><a href="UserProfile.php" class="text-white">User Profile</a></li>
+                    <li class="list-inline-item"><a href="Login.html" class="text-white">Login</a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white">Sign out</a></li>
                 </ul>
             </nav>
         </div>
@@ -74,7 +78,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Greek civilization</h5>
                             <p class="card-text">Dive into ancient Greece's captivating mythology and history.
-                                Explore heroes and iconic tales like Zeus and Hercules. Immerse yourself in art, artifacts, and the spirit of the Acropolis and Olympic Games. Experience the timeless allure of this legendary civilization.</p>
+                                Explore heroes and iconic tales like Zeus and Hercules. Immerse yourself in art
+                                , artifacts, and the spirit of the Acropolis and Olympic Games. Experience the timeless allure of this legendary civilization.</p>
                             <a href="#" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
@@ -114,9 +119,8 @@
         <section class="py-4">
         <ul>
             <li><a href="#">About us</a></li>
-            <li><a href="Views/ContactUs.html">Contact us</a></li>
-            <li><a href="#">Provide a feedback</a></li>
-            <li><a href="#">Muesum map</a></li>
+            <li><a href="ContactUs.html">Contact us</a></li>
+            <li><a href="MuseumMap.html">Muesum map</a></li>
             <li><a href="#">Hire a Guide</a></li>
         </ul>
     </section>
