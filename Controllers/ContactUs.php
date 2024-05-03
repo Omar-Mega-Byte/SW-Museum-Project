@@ -1,5 +1,5 @@
 <?php
-require_once '../Models/User.php';
+require '../Models/User.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
         $username = $_POST['username'];
