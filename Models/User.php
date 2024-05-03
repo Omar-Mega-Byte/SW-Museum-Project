@@ -69,6 +69,19 @@ class User {
             return false;
         }
     }
-    
+    public function BookVisit($name,$email,$visitname,$phone){
+        $newController = new DBController();
+        $newController->openConnection();
+        $sql="INSERT INTO `bookVisit` (`name`,`email`, `visitname` ,`phone`) VALUES ('$name','$email','$visitname','$phone')";
+        if ($newController->insert($sql)) {
+            header('Location: ../Views/Success.html');
+            $newController->closeConnection();
+            exit();
+        } else {
+            header('Location: ../Views/Error.html');
+            $newController->closeConnection();
+            exit();
+        }
+    }
 }
 ?>
