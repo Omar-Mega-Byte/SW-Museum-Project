@@ -83,5 +83,52 @@ class User {
             exit();
         }
     }
+    public function BookEvent($name,$email,$eventname,$phone){
+        $newController = new DBController();
+        $newController->openConnection();
+        $sql="INSERT INTO `bookevent` (`name`,`email`,`eventname`,`phone`) VALUES ('$name','$email','$eventname','$phone')";
+        if ($newController->insert($sql)) {
+            header('Location: ../Views/Success.html');
+            $newController->closeConnection();
+            exit();
+        } else {
+            header('Location: ../Views/Error.html');
+            $newController->closeConnection();
+            exit();
+        }
+    }
+    public function Signout(){
+        session_start();
+        $email = $_SESSION['email'];
+        $newController = new DBController();
+        $newController->openConnection();
+        $sql="DELETE FROM `login` WHERE email ='$email' ";
+        if ($newController->update($sql)) {
+            $newController->closeConnection();
+            header('Location: ../Views/index.html');
+            exit();
+        } else {
+            header('Location: ../Views/Error.html');
+            $newController->closeConnection();
+            exit();
+        }
+    }
+    public function UpdateInfo($username,$email,$password){
+        session_start();
+        $email = $_SESSION['email'];
+        $newController = new DBController();
+        $newController->openConnection();
+        $sql="UPDATE `login` SET `username`='$username',`email`='$email',`password`='$password' WHERE email='$email'";
+        if ($newController->update($sql)) {
+            $newController->closeConnection();
+            header('Location: ../Views/Home.php');
+            exit();
+        } else {
+            header('Location: ../Views/Error.html');
+            $newController->closeConnection();
+            exit();
+        }
+    }
 }
+
 ?>

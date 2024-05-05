@@ -6,9 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['username'];
         $password = $_POST['password'];
         $email = $_POST['email'];
-        $_SESSION['email'] = $email;
         $newUser = new User();
-        $newUser->Register($username,$email,$password);
+        $newUser->UpdateInfo($username,$email,$password);
     } else {
         echo "All fields are required.";
         exit();
@@ -17,4 +16,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include('../Views/Error.html');
     exit();
 }
-?>

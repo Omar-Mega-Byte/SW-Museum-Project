@@ -16,14 +16,15 @@
             <h1 class="mb-0">Helwan welcomes u :3</h1>
             <nav>
                 <ul class="list-inline mb-0">
-                    <li class="list-inline-item"><a href="../Views/Events.html" class="text-white">Exhibitions & Events</a></li>
-                    <li class="list-inline-item"><a href="#" class="text-white">Collection</a></li>
-                    <li class="list-inline-item"><a href="#" class="text-white">Learn</a></li>
-                    <li class="list-inline-item"><a href="#" class="text-white">Membership</a></li>
-                    <li class="list-inline-item"><a href="#" class="text-white">Facilities</a></li>
+                    <li class="list-inline-item"><a href="Events.php" class="text-white">Exhibitions & Events</a></li>
+                    <li class="list-inline-item"><a href="Collection.php" class="text-white">Collection</a></li>
+                    <li class="list-inline-item"><a href="learn.php" class="text-white">Learn</a></li>
+                    <li class="list-inline-item"><a href="membership.html" class="text-white">Membership</a></li>
+                    <li class="list-inline-item"><a href="facilities.html" class="text-white">Facilities</a></li>
                     <li class="list-inline-item"><a href="UserProfile.php" class="text-white">User Profile</a></li>
                     <li class="list-inline-item"><a href="Login.html" class="text-white">Login</a></li>
-                    <li class="list-inline-item"><a href="#" class="text-white">Sign out</a></li>
+                    <li class="list-inline-item"><a href="UpdateInfo.html" class="text-white">Update your Info</a></li>
+                    <li class="list-inline-item"><a href="../Controllers/Signout.php" class="text-white">Sign out</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,7 +33,7 @@
         <div class="container">
             <h2 class="text-center">Welcome to Helwan Museum</h2>
             <h4 class="text-center">Experience cultures across the globe, from the dawn of human history to the present</h4>
-            <a href="../Views/Visit Book.html" class="btn btn-primary btn-lg d-block mx-auto mt-4">Plan Your Visit</a>
+            <a href="ourVisit.php" class="btn btn-primary btn-lg d-block mx-auto mt-4">Plan Your Visit</a>
         </div>
     </section>
     <section class="py-4 bg-light">
@@ -80,7 +81,7 @@
                             <p class="card-text">Dive into ancient Greece's captivating mythology and history.
                                 Explore heroes and iconic tales like Zeus and Hercules. Immerse yourself in art
                                 , artifacts, and the spirit of the Acropolis and Olympic Games. Experience the timeless allure of this legendary civilization.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="Events.php" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +93,7 @@
                             <p class="card-text">Journey to ancient Egypt and discover the mystique of the Pharaohs.
                                 Marvel at the grand pyramids, temples, and treasures like those of Tutankhamun.
                                 Delve into mummification rituals, hieroglyphs, and the enduring legacy of a civilization that continues to fascinate.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="Events.php" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -101,24 +102,14 @@
     </section>
     <section class="py-4">
         <div class="container">
-            <h3>Upcoming Events</h3>
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">Event 1</a>
-                <a href="#" class="list-group-item list-group-item-action">Event 2</a>
-                <a href="#" class="list-group-item list-group-item-action">Event 3</a>
-            </div>
-        </div>
-    </section>
-    <section class="py-4">
-        <div class="container">
             <h3>Get Involved</h3>
             <p>Information about how visitors can get involved with the museum, such as volunteering or membership</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a href="membership.html" class="btn btn-primary">Learn More</a>
         </div>
     </section>
         <section class="py-4">
         <ul>
-            <li><a href="#">About us</a></li>
+            <li><a href="aboutUs.html">About us</a></li>
             <li><a href="ContactUs.html">Contact us</a></li>
             <li><a href="MuseumMap.html">Muesum map</a></li>
             <li><a href="#">Hire a Guide</a></li>
