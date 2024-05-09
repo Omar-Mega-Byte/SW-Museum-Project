@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Membership</title>
+    <link rel="icon" href="../Data/Untitled (1).png">
+    <style>
+        body {
+            background-image: url("C:/xampp/htdocs/museum/OIG2.jpeg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .benefits {
+            margin-top: 30px;
+        }
+
+        .benefits p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Museum Membership</h1>
+        <form method="POST" action="../Controllers/Membership.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required>
+
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="package">Choose a Package:</label>
+            <select id="package" name="package">
+                <option value="regular">Regular Package - $100/year (20% off)</option>
+                <option value="premium">Premium Package - $150/year (30% off)</option>
+                <option value="student">Student Package - $50/year (40% off)</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="benefits">
+            <h2>Membership Benefits:</h2>
+            <p><strong>Regular Package:</strong> Get a 20% discount on all tickets and events.</p>
+            <p><strong>Premium Package:</strong> Enjoy a 30% discount on all tickets, events, and products at the museum
+                store.</p>
+            <p><strong>Student Package:</strong> Avail a 40% discount on tickets and events.</p>
+        </div>
+    </div>
+</body>
+
+</html>
